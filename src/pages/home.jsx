@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useReducer } from 'react';
-
+import Class from './UI/class';
 
 function reducer(state, action){
   let newCount;
@@ -73,10 +73,13 @@ function Home({user}){
             <button className='mx-3' onClick={() => dispatch({type: "increment"})}>+</button>
             <button className='mx-3' onClick={() => dispatch({type: "decrement"})}>-</button>
             <button className='mx-3' onClick={() => dispatch({type: "toggle-blue"})}>Toggle Blue Text</button>
-            <div style={{color: state.blueText && "blue"}}>
+            <div style={{color: state.blueText && "blue"}} className='m-10'>
               <h2 className='text-3xl'>Count: {state.count}</h2>
               <h2 className='text-3xl'>Input: {state.input}</h2>
             </div>
+            <hr/>
+            <h1 className='m-5'>Class</h1>
+            <Class />
           </div>
         </div>
     );
