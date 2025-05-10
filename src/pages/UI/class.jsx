@@ -12,6 +12,7 @@ class Class extends Component {
 
         return (
             <>
+                <h1 className='m-5'>Class</h1>
                 {blue ? (
                     <h1 className="text-blue-600">Hello World</h1>
                 ) : (
